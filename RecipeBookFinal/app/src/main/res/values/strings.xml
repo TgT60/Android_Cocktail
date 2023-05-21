@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Recipe BookFinal</string>
+    <string name="cocktail_item">Cocktail</string>
+    <string name="menu_text">Menu</string>
+    <string name="about_us_text">About us</string>
+    <string name="main_text">Main</string>
+    <string name="alcohol_strength">Strength:</string>
+    <string name="short_description">Description:</string>
+
+</resources>

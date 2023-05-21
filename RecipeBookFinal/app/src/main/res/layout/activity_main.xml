@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recepiRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context=".MainActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout"
+      android:layout_width="70dp"
+      android:layout_height="0dp"
+      android:background="@color/sideBareBg"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/cocktail_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cocktail" />
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="66dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="160dp"
+        android:fontFamily="@font/ubuntu_mono"
+        android:gravity="center"
+        android:rotation="270"
+        android:text="@string/menu_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:fontFamily="@font/ubuntu_mono"
+        android:gravity="center"
+        android:rotation="270"
+        android:text="@string/about_us_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/main"
+        android:layout_width="66dp"
+        android:layout_height="140dp"
+        android:fontFamily="@font/ubuntu_mono_bold"
+        android:gravity="center"
+        android:rotation="270"
+        android:text="@string/main_text"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:id="@+id/cocktail_main"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="52dp"
+      android:fontFamily="@font/ubuntu_mono"
+      android:text="@string/cocktail_item"
+      android:textSize="48sp"
+      app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/menu_main"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="52dp"
+      android:fontFamily="@font/ubuntu_mono_bold"
+      android:text="@string/menu_text"
+      android:textColor="#7986CB"
+      android:textSize="48sp"
+      app:layout_constraintStart_toEndOf="@+id/cocktail_main"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="15dp"
+      android:contentDescription="@string/cocktail_item"
+      app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+      app:layout_constraintTop_toBottomOf="@+id/cocktail_main"
+      app:srcCompat="@drawable/ic_filter" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/categoryR"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="10dp"
+      app:layout_constraintBottom_toBottomOf="@+id/imageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/imageView"
+      app:layout_constraintTop_toTopOf="@+id/imageView"
+      app:layout_constraintVertical_bias="0.0"
+      tools:listitem="@layout/catetegory_item" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="147dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+      app:layout_constraintTop_toBottomOf="@+id/categoryR"
+      app:layout_constraintVertical_bias="1.0"
+      tools:listitem="@layout/shot_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
